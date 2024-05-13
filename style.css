@@ -1,0 +1,215 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #474747;
+    color: #fff;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+nav {
+    flex-grow: 1; /* Pour pousser le logo au extrémités */
+    text-align: center; /* Pour centrer les éléments du menu */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #3d3d3d;
+}
+
+.salon {
+    margin-left: 100px; /* Ajustez cette valeur selon vos besoins */
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+}
+
+.small-images {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.gallery img {
+    width: 600px; 
+}
+
+.small-images img {
+    width: 300px; 
+}
+
+.gallery img,
+.small-images img {
+    border-radius: 10px; 
+}
+
+.coiffure {
+    margin-top: 40px;
+}
+
+.coiffure h2 {
+    font-size: 24px; 
+    margin-bottom: 10px; 
+    margin-left: 100px;
+}
+
+.underline {
+    border: none;
+    border-top: 2px solid rgb(58, 57, 57); /* Couleur et épaisseur du trait */
+    width: 90%; /* Étend le trait sur la largeur de la page */
+}
+
+.coiffure p {
+    font-size: 24px; 
+    margin-bottom: 10px; 
+    margin-left: 100px;
+}
+
+.coiffure p:nth-of-type(2) {
+    font-size: 20px; /* Ajustez cette valeur selon vos besoins */
+}
+
+.coiffure p:nth-of-type(3) {
+    font-size: 20px; /* Ajustez cette valeur selon vos besoins */
+}
+
+.coiffure p:nth-of-type(4) {
+    font-size: 20px; /* Ajustez cette valeur selon vos besoins */
+}
+
+.coiffure p:nth-of-type(4) {
+    font-size: 20px; /* Ajustez cette valeur selon vos besoins */
+}
+
+.coiffure p:nth-of-type(5) {
+    font-size: 20px; /* Ajustez cette valeur selon vos besoins */
+}
+
+.coiffure p:nth-of-type(6) {
+    font-size: 20px; /* Ajustez cette valeur selon vos besoins */
+}
+
+.coiffure-options {
+    display: flex;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden; /* Pour empêcher le débordement du contenu */
+    max-width: 50%; /* Limite la largeur à 50% de la page */
+    margin-left: 100px;
+    margin-right: 10px; /* Ajoute un espace à droite de la section */
+}
+
+.coiffure-list,
+.prix {
+    flex: 1; /* Pour que les éléments occupent la même largeur */
+    padding: 20px;
+}
+
+.coiffure-list ul,
+.prix ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.coiffure-list ul li,
+.prix ul li {
+    margin-bottom: 10px;
+}
+
+.prix {
+    text-align: right; /* Aligner les prix à droite */
+}
+
+.side-content {
+    float: right; /* Aligne le contenu à droite */
+    max-width: 40%; /* Limite la largeur pour laisser de l'espace à gauche */
+    margin-left: 20px; /* Ajoute de l'espace entre les deux sections */
+    margin-left: 10px;
+}
+
+.avis,
+.horaires {
+    background-color: #fff; /* Couleur de fond blanc */
+    border: 1px solid #ccc; /* Bordure grise */
+    border-radius: 5px; /* Coins arrondis */
+    padding: 20px; /* Espacement intérieur */
+    margin-bottom: 20px; /* Espacement entre les sections */
+    text-align: center; /* Centre le contenu à l'intérieur */
+}
+
+.localisation {
+    margin-top: 50px; /* Ajoute une marge de 20 pixels en haut */
+}
+
+.localisation h3 {
+    margin-left: 100px; /* Décale l'élément de 20 pixels vers la droite */
+}
+
+.localisation p {
+    font-size: 14px; /* Définit la taille du texte à 14 pixels */
+    margin-left: 120px;
+}
+
+
+.localisation img {
+    max-width:70%; /* Largeur maximale de l'image */
+    height: auto; /* Laisser la hauteur ajustée automatiquement pour conserver les proportions */
+    display: block; /* Assurez-vous que l'image est affichée en tant que bloc */
+    margin: 0 auto; /* Centre l'image horizontalement */
+    width: 60%; /* Réduit la largeur de l'image à 80% de la largeur du conteneur */
+}
+
+.info-box {
+    background-color: #f0f0f0; /* Couleur de fond gris clair */
+    border: 1px solid #ccc; /* Bordure grise */
+    border-radius: 5px; /* Coins arrondis */
+    padding: 10px; /* Espacement intérieur */
+    width: 60%; /* Largeur du carré */
+    margin: 0 auto; /* Centre le carré horizontalement */
+    text-align: left; /* Alignement du texte à gauche à l'intérieur du carré */
+}
+
+.container h3 {
+    margin-left: 100px; /* Décale l'élément de 20 pixels vers la droite */
+}
+
+.basdepage {
+    margin-top: 50px; /* Ajoute un espace de 20 pixels au-dessus de la ligne */
+    margin-bottom: 0px; /* Ajoute un espace de 20 pixels en dessous de la ligne */
+}
+
+.page-border {
+    border-top: 300px solid #ccc; /* Bordure grise clair de 2 pixels en haut */
+    background-color: #f0f0f0; /* Fond gris clair */
+    width: 100%; /* Largeur de la bordure sur toute la page */
+}
+
