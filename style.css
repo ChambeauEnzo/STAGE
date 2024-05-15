@@ -42,11 +42,11 @@
  }
  
  .navbar .nav-links ul li {
-     margin: 0 25px;
+     margin: 0 30px;
  }
  
  .navbar .menu-deroule {
-     display: none;
+    display: none;
      position: absolute;
      top: 50px;
      right: 50px;
@@ -103,18 +103,39 @@
 /*Salon*/
 
 .salon {
-    margin-left: 100px;
+   position: relative;
+   top: 190px;
+   left: 300px;
 }
+
+.salon p{
+    position: relative;
+    top: 5px;
+    left: 15px;
+ }
 
 .gallery {
     display: flex;
     justify-content: center;
+    margin-top: 210px;
+}
+
+.large-image {
+    flex: 0.5; /* Prend autant d'espace que possible */
+}
+
+.large-image img {
+    width: 100%; 
+    display: block; /* Pour éviter les espaces blancs */
+    border-radius: 10px; 
 }
 
 .small-images {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 310px;  
+    margin-bottom:20px;
 }
 
 .gallery img {
@@ -129,6 +150,9 @@
 .small-images img {
     border-radius: 10px; 
 }
+
+
+/*coiffure
 
 .coiffure {
     margin-top: 40px;
