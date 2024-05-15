@@ -1,50 +1,109 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
+/*menu*/
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #4b4a4a;
-    color: #fff;
-}
-
-.logo h1 {
-    margin: 0;
-    font-size: 26px;
-}
-
-nav {
-    flex-grow: 1; /* Pour pousser le logo au extrémités */
-    text-align: center; /* Pour centrer les éléments du menu */
-}
-
-nav ul {
-    list-style-type: none;
+* {
     margin: 0;
     padding: 0;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    display: inline-block;
-    padding: 10px 20px;
-    color: #fff;
     text-decoration: none;
-}
+    list-style: none;
+ }
+ 
+ body {
+     font-family: 'Poppins';
+ }
+ 
+ header {
+     height: 100vh;
+     width: 100vw;
+     background-image: url(image/grisfond.jpg);
+     background-size: cover;
+ }
+ 
+ .navbar {
+     position: absolute;
+     padding: 50px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     width: 100%;
+     box-sizing:border-box;
+ }
+ 
+ .navbar a {
+     color: rgb(63, 62, 62);
+ }
+ 
+ .navbar .logo {
+     font-size: 2em;
+     font-weight: bold;
+ }
+ 
+ .navbar .nav-links ul {
+     display: flex;
+ }
+ 
+ .navbar .nav-links ul li {
+     margin: 0 25px;
+ }
+ 
+ .navbar .menu-deroule {
+     display: none;
+     position: absolute;
+     top: 50px;
+     right: 50px;
+     width: 35px;
+ }
+ 
+ @media screen and (max-width: 900px) {
+     .navbar {
+         padding: 0;
+     }
+     
+     .navbar .logo {
+        position: absolute;
+        top: 40px;
+        left: 30px;
+     }
+ 
+     .navbar .menu-deroule {
+         display:block;
+     }
+ 
+     .nav-links {
+         top: 0;
+         left: 0;
+         position: absolute;
+         background-color: rgba(255, 255, 255, 0.301);
+         backdrop-filter: blur(7px);
+         width: 100%;
+         height: 100vh;
+         display: flex;
+         justify-content: center;
+         align-items: center ;
+         margin-left: -100%;
+         transition: all 0.5s ease;
+     }
+ 
+     .nav-links.mobile-menu {
+         margin-left: 0;
+     }
+ 
+     .nav-links ul {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+     }
+ 
+     .navbar .nav-links ul li {
+         margin: 25px 0;
+         font-size: 1.2em;
+     }
+ }
 
-nav ul li a:hover {
-    background-color: #3d3d3d;
-}
+
+/*Salon*/
 
 .salon {
-    margin-left: 100px; /* Ajustez cette valeur selon vos besoins */
+    margin-left: 100px;
 }
 
 .gallery {
