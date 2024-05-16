@@ -157,6 +157,7 @@
     border-radius: 5px; 
 }
 
+
 /*imagefond*/
 
 .modal {
@@ -204,6 +205,57 @@
 }
 
 
+/*coiffure*/
+
+footer {
+    position: relative; 
+    background-color: #e2e2e2c2;
+    padding: 20px;
+    text-align: left;
+}
+
+.footer-left {
+    position: absolute;
+    bottom: 20px;
+    left: 50px; /* Ajustez cette valeur selon vos besoins */
+    width: calc(100% - 50px); /* Réduire la largeur en fonction du décalage vers la gauche */  
+}
+
+.footer-left hr {
+    width: 80%;
+    border-top: 2px solid #000;
+    margin: 10px auto; /* Ajoute de l'espace en haut et en bas */
+}
+
+.footer-left h3 {
+    display: inline-block; 
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+
+.footer-left h3:nth-child(1) {
+    margin-left: 200px; 
+}
+
+.footer-left h3:nth-child(2) {
+    margin-left: 30px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*coiffure
 
 .coiffure {
@@ -219,8 +271,8 @@
 .underline {
     border: none;
     border-top: 2px solid rgb(58, 57, 57); 
-    width::aft 90%; 
-}
+    width: aft 90%; 
+} 
 
 .coiffure p {
     font-size: 24px; 
@@ -229,43 +281,42 @@
 }
 
 .coiffure p:nth-of-type(2) {
-    font-size: 20px; /* Ajustez cette valeur selon vos besoins */
+    font-size: 20px;
 }
 
 .coiffure p:nth-of-type(3) {
-    font-size: 20px; /* Ajustez cette valeur selon vos besoins */
+    font-size: 20px; 
 }
 
 .coiffure p:nth-of-type(4) {
-    font-size: 20px; /* Ajustez cette valeur selon vos besoins */
+    font-size: 20px; 
 }
 
 .coiffure p:nth-of-type(4) {
-    font-size: 20px; /* Ajustez cette valeur selon vos besoins */
+    font-size: 20px; 
 }
 
 .coiffure p:nth-of-type(5) {
-    font-size: 20px; /* Ajustez cette valeur selon vos besoins */
+    font-size: 20px; 
 }
 
 .coiffure p:nth-of-type(6) {
-    font-size: 20px; /* Ajustez cette valeur selon vos besoins */
-}
+    font-size: 20px; 
 
 .coiffure-options {
     display: flex;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 5px;
-    overflow: hidden; /* Pour empêcher le débordement du contenu */
-    max-width: 50%; /* Limite la largeur à 50% de la page */
+    overflow: hidden; 
+    max-width: 50%; 
     margin-left: 100px;
-    margin-right: 10px; /* Ajoute un espace à droite de la section */
+    margin-right: 10px; 
 }
 
 .coiffure-list,
 .prix {
-    flex: 1; /* Pour que les éléments occupent la même largeur */
+    flex: 1; 
     padding: 20px;
 }
 
@@ -281,70 +332,70 @@
 }
 
 .prix {
-    text-align: right; /* Aligner les prix à droite */
+    text-align: right;
 }
 
 .side-content {
-    float: right; /* Aligne le contenu à droite */
-    max-width: 40%; /* Limite la largeur pour laisser de l'espace à gauche */
-    margin-left: 20px; /* Ajoute de l'espace entre les deux sections */
+    float: right; 
+    max-width: 40%; 
+    margin-left: 20px; 
     margin-left: 10px;
 }
 
 .avis,
 .horaires {
-    background-color: #fff; /* Couleur de fond blanc */
-    border: 1px solid #ccc; /* Bordure grise */
-    border-radius: 5px; /* Coins arrondis */
-    padding: 20px; /* Espacement intérieur */
-    margin-bottom: 20px; /* Espacement entre les sections */
-    text-align: center; /* Centre le contenu à l'intérieur */
+    background-color: #fff; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    padding: 20px; 
+    margin-bottom: 20px; 
+    text-align: center; 
 }
 
-.localisation {
-    margin-top: 50px; /* Ajoute une marge de 20 pixels en haut */
+/*.localisation {
+    margin-top: 50px; 
 }
 
 .localisation h3 {
-    margin-left: 100px; /* Décale l'élément de 20 pixels vers la droite */
+    margin-left: 100px; 
 }
 
 .localisation p {
-    font-size: 14px; /* Définit la taille du texte à 14 pixels */
+    font-size: 14px; 
     margin-left: 120px;
 }
 
 
 .localisation img {
-    max-width:70%; /* Largeur maximale de l'image */
-    height: auto; /* Laisser la hauteur ajustée automatiquement pour conserver les proportions */
-    display: block; /* Assurez-vous que l'image est affichée en tant que bloc */
-    margin: 0 auto; /* Centre l'image horizontalement */
-    width: 60%; /* Réduit la largeur de l'image à 80% de la largeur du conteneur */
+    max-width:70%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+    width: 60%; 
 }
 
 .info-box {
-    background-color: #f0f0f0; /* Couleur de fond gris clair */
-    border: 1px solid #ccc; /* Bordure grise */
-    border-radius: 5px; /* Coins arrondis */
-    padding: 10px; /* Espacement intérieur */
-    width: 60%; /* Largeur du carré */
-    margin: 0 auto; /* Centre le carré horizontalement */
-    text-align: left; /* Alignement du texte à gauche à l'intérieur du carré */
+    background-color: #f0f0f0; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    padding: 10px; 
+    width: 60%; 
+    margin: 0 auto; 
+    text-align: left; 
 }
 
 .container h3 {
-    margin-left: 100px; /* Décale l'élément de 20 pixels vers la droite */
+    margin-left: 100px;
 }
 
 .basdepage {
-    margin-top: 50px; /* Ajoute un espace de 20 pixels au-dessus de la ligne */
-    margin-bottom: 0px; /* Ajoute un espace de 20 pixels en dessous de la ligne */
+    margin-top: 50px; /
+    margin-bottom: 0px; 
 }
 
 .page-border {
-    border-top: 300px solid #ccc; /* Bordure grise clair de 2 pixels en haut */
-    background-color: #f0f0f0; /* Fond gris clair */
-    width: 100%; /* Largeur de la bordure sur toute la page */
+    border-top: 300px solid #ccc; 
+    background-color: #f0f0f0; 
+    width: 100%; 
 }
 

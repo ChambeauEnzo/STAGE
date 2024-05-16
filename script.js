@@ -29,3 +29,14 @@ function closeModal() {
     modal.style.display = "none";
     document.body.classList.remove("blur"); // Retirer la classe pour enlever le flou
 }
+
+function afficherSection(sectionId) {
+    var sections = document.querySelectorAll('div[id^="section"]');
+    for (var i = 0; i < sections.length; i++) {
+        if (sections[i].id === sectionId) {
+            sections[i].style.display = 'block';
+        } else {
+            sections[i].style.display = 'none';
+        }
+    }
+}
