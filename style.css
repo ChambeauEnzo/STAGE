@@ -12,12 +12,18 @@
  }
  
  header {
-     height: 100vh;
-     width: 100vw;
-     background-image: url(image/grisfond.jpg);
-     background-size: cover;
- }
- 
+    height: 100vh;
+    background-color: #e2e2e2c2; 
+    overflow-x: hidden;
+}
+
+.second-fond {
+    background-color: #ffffffbe;
+    padding: 40px 0; 
+    height: 40px; /* Hauteur de la section */
+    width: 100%; /* Largeur de la section */
+}
+
  .navbar {
      position: absolute;
      padding: 50px;
@@ -104,7 +110,7 @@
 
 .salon {
    position: relative;
-   top: 190px;
+   top: 60px;
    left: 300px;
 }
 
@@ -117,16 +123,16 @@
 .gallery {
     display: flex;
     justify-content: center;
-    margin-top: 210px;
+    margin-top: 90px;
 }
 
 .large-image {
-    flex: 0.5; /* Prend autant d'espace que possible */
+    flex: 0.5; 
 }
 
 .large-image img {
     width: 100%; 
-    display: block; /* Pour éviter les espaces blancs */
+    display: block;
     border-radius: 10px; 
 }
 
@@ -148,7 +154,53 @@
 
 .gallery img,
 .small-images img {
-    border-radius: 10px; 
+    border-radius: 5px; 
+}
+
+/*imagefond*/
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.89); /* Fond sombre semi-transparent */
+    overflow: auto;
+    backdrop-filter: blur(10px); /* Ajoute un flou au fond */
+}
+
+.modal-content {
+    position: relative;
+    margin: auto;
+    max-width: 90%;
+    max-height: 90%;
+    text-align: center;
+}
+
+.modal-content img {
+    display: block;
+    margin: 20px auto; /* Ajouter de l'espace entre les images */
+    max-width: 100%; 
+    max-height: 100%; 
+    width: 40%; /* Augmenter la taille de l'image */
+    height: auto; 
+}
+
+/* Styles pour la croix */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000000; 
 }
 
 
@@ -166,8 +218,8 @@
 
 .underline {
     border: none;
-    border-top: 2px solid rgb(58, 57, 57); /* Couleur et épaisseur du trait */
-    width: 90%; /* Étend le trait sur la largeur de la page */
+    border-top: 2px solid rgb(58, 57, 57); 
+    width::aft 90%; 
 }
 
 .coiffure p {

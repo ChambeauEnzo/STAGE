@@ -10,6 +10,8 @@
 </head>
 <body>
 
+    <header>
+
     <nav class="navbar">
         <a href="#" class="logo">Espace ISA' PHIL coiffure</a>
         <div class="nav-links">
@@ -24,6 +26,10 @@
         <img src="image/mnug.jpg" alt="menu deroule" class="menu-deroule">
     </nav>    
 
+    <section class="second-fond">   
+    </section>
+
+
      <div class="salon"> 
         <h2>Esapce ISA' PHIL coiffure</h2>
         <p>40 bis rue Jean Juarés, 80170 Rosiere en Santerre</p>
@@ -31,7 +37,7 @@
 
     <div class="gallery">
         <div class="large-image">
-            <img src="image/1.jpg" alt="Grande Image">
+            <img src="image/1.jpg" alt="Image 1" onclick="openModal('image/1.jpg')">
         </div>
         <div class="small-images">
             <img src="image/3.jpg" alt="Petite Image 1">
@@ -39,11 +45,17 @@
         </div>
         <div class="small-images">
             <img src="image/2.jpg" alt="Petite Image 3">
-            <img src="image/3.jpg" alt="Petite Image 4" id="showAllImages">
+            <img src="image/3.jpg" alt="Image 1" onclick="openModal(['image/1.jpg', 'image/2.jpg', 'image/3.jpg'])">
+            
+            <div id="modal" class="modal">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div id="modalContent" class="modal-content"></div>
         </div>
     </div>
     
+</header>
 
+    
     <!--<div class="coiffure">
         <h2>Coiffure</h2>
         <hr class="underline">
