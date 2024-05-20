@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+
 //image fond//
 
 // Fonction pour ouvrir la modale avec une liste d'images
@@ -23,6 +24,7 @@ function openModal(imageList) {
     document.body.classList.add("blur"); // Ajouter une classe pour flouter le fond
 }
 
+
 // Fonction pour fermer la modale
 function closeModal() {
     var modal = document.getElementById("modal");
@@ -30,13 +32,42 @@ function closeModal() {
     document.body.classList.remove("blur"); // Retirer la classe pour enlever le flou
 }
 
-function afficherSection(sectionId) {
-    var sections = document.querySelectorAll('div[id^="section"]');
-    for (var i = 0; i < sections.length; i++) {
-        if (sections[i].id === sectionId) {
-            sections[i].style.display = 'block';
-        } else {
-            sections[i].style.display = 'none';
-        }
-    }
-}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const voirPlusLink = document.getElementById("voir-plus");
+    const reduireText = document.querySelector(".reduire");
+    let propositionsInitiales = []; // Tableau pour stocker les éléments supplémentaires initiaux
+
+    voirPlusLink.addEventListener("click", function(event) {
+        event.preventDefault();
+
+        const autresPropositions = document.querySelectorAll(".info-box .autre-proposition");
+
+        // Enregistrer l'état initial des éléments supplémentaires
+        autresPropositions.forEach(function(paragraph) {
+            propositionsInitiales.push(paragraph);
+        });
+
+        // Afficher les éléments supplémentaires
+        autresPropositions.forEach(function(paragraph) {
+            paragraph.style.display = "block";
+        });
+
+        voirPlusLink.style.display = "none";
+        reduireText.style.display = "block"; // Affiche le message de réduction
+    });
+
+    reduireText.addEventListener("click", function(event) {
+        event.preventDefault();
+
+        // Rétablir l'état initial des éléments supplémentaires
+        propositionsInitiales.forEach(function(paragraph) {
+            paragraph.style.display = "none";
+        });
+
+        voirPlusLink.style.display = "block";
+        reduireText.style.display = "none"; // Masque le message de réduction
+    });
+});
+
+

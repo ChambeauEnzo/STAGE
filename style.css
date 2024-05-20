@@ -9,6 +9,8 @@
  
  body {
      font-family: 'Poppins';
+     height: 100%;
+     width: 100%;
  }
  
  header {
@@ -20,13 +22,13 @@
 .second-fond {
     background-color: #ffffffbe;
     padding: 40px 0; 
-    height: 40px; /* Hauteur de la section */
+    height: 30px; /* Hauteur de la section */
     width: 100%; /* Largeur de la section */
 }
 
  .navbar {
      position: absolute;
-     padding: 50px;
+     padding: 37px;
      display: flex;
      justify-content: space-between;
      align-items: center;
@@ -207,150 +209,111 @@
 
 /*coiffure*/
 
-footer {
+.service {
     position: relative; 
     background-color: #e2e2e2c2;
-    padding: 20px;
+    padding: 60px;
     text-align: left;
 }
 
-.footer-left {
+.service-left {
     position: absolute;
     bottom: 20px;
-    left: 50px; /* Ajustez cette valeur selon vos besoins */
-    width: calc(100% - 50px); /* Réduire la largeur en fonction du décalage vers la gauche */  
+    left: 50px; 
+    width: calc(100% - 50px); 
 }
 
-.footer-left hr {
-    width: 80%;
+.service-left hr {
+    width: 85%;
     border-top: 2px solid #000;
-    margin: 10px auto; /* Ajoute de l'espace en haut et en bas */
+    margin: 10px auto 35px; 
 }
 
-.footer-left h3 {
+.service-left h3 {
     display: inline-block; 
     font-size: 20px;
     margin-bottom: 0px;
 }
 
-.footer-left h3:nth-child(1) {
-    margin-left: 200px; 
+.service-left h3:nth-child(1) {
+    margin-left: 170px; 
 }
 
-.footer-left h3:nth-child(2) {
+.service-left h3:nth-child(2) {
     margin-left: 30px; 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*coiffure
-
-.coiffure {
-    margin-top: 40px;
+.service-left p {
+    margin-left: 135px; 
 }
 
-.coiffure h2 {
-    font-size: 24px; 
-    margin-bottom: 10px; 
-    margin-left: 100px;
+.info-box {
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px; 
+    margin-top: 20px;
+    margin-left: 130px;
+    width: 80%; 
+    max-width: 700px; 
+    /*height: 200px; 
+    overflow-y: auto; /* Défilement vertical si nécessaire */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.underline {
+.info-box p {
+    margin: 10px 0;
+}
+
+.info-box .thin {
     border: none;
-    border-top: 2px solid rgb(58, 57, 57); 
-    width: aft 90%; 
-} 
-
-.coiffure p {
-    font-size: 24px; 
-    margin-bottom: 10px; 
-    margin-left: 100px;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
 }
 
-.coiffure p:nth-of-type(2) {
-    font-size: 20px;
+.reduire {
+    color: red; 
+    cursor: pointer; 
 }
 
-.coiffure p:nth-of-type(3) {
-    font-size: 20px; 
+.autre-proposition {
+    margin: 0; 
+    display: none;
 }
 
-.coiffure p:nth-of-type(4) {
-    font-size: 20px; 
+.autre-proposition.visible {
+    display: block;
 }
 
-.coiffure p:nth-of-type(4) {
-    font-size: 20px; 
-}
-
-.coiffure p:nth-of-type(5) {
-    font-size: 20px; 
-}
-
-.coiffure p:nth-of-type(6) {
-    font-size: 20px; 
-
-.coiffure-options {
-    display: flex;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    overflow: hidden; 
-    max-width: 50%; 
-    margin-left: 100px;
-    margin-right: 10px; 
-}
-
-.coiffure-list,
-.prix {
+.content {
     flex: 1; 
+    display: grid;
+}
+
+
+/*Horaire*/
+
+.opening-hours {
+    background-color: white;
+    border-radius: 15px;
     padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 85%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 999; /* Assure que la boîte s'affiche au-dessus du contenu si nécessaire */
 }
 
-.coiffure-list ul,
-.prix ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.coiffure-list ul li,
-.prix ul li {
+.opening-hours h3 {
+    font-size: 20px;
     margin-bottom: 10px;
 }
 
-.prix {
-    text-align: right;
+.opening-hours p {
+    margin-bottom: 5px;
 }
 
-.side-content {
-    float: right; 
-    max-width: 40%; 
-    margin-left: 20px; 
-    margin-left: 10px;
-}
 
-.avis,
-.horaires {
-    background-color: #fff; 
-    border: 1px solid #ccc; 
-    border-radius: 5px; 
-    padding: 20px; 
-    margin-bottom: 20px; 
-    text-align: center; 
-}
 
 /*.localisation {
     margin-top: 50px; 
