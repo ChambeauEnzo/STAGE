@@ -159,6 +159,39 @@
     border-radius: 5px; 
 }
 
+.image-flouter {
+    position: relative;
+    display: inline-block;
+}
+
+.image-flouter img {
+    display: block;
+    width: 97%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.blur-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 97%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fond noir avec une opacité de 0.5 */
+    backdrop-filter: blur(10px); /* Ajoute un flou à l'arrière-plan */
+    border-radius: 5px;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
 
 /*imagefond*/
 
@@ -210,54 +243,94 @@
 /*coiffure*/
 
 .service {
-    position: relative; 
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
     background-color: #e2e2e2c2;
-    padding: 60px;
+    padding: 145px;
     text-align: left;
+    gap: 50px; 
 }
 
 .service-left {
-    position: absolute;
-    bottom: 20px;
-    left: 50px; 
-    width: calc(100% - 50px); 
+    flex: 1;
+    margin-top: -360px;
 }
 
-.service-left hr {
-    width: 85%;
-    border-top: 2px solid #000;
-    margin: 10px auto 35px; 
+.service-left h3{
+    display: inline-block;
+    margin-bottom: 0;
+    padding-right: 20px; 
+    padding-left: 10px; 
 }
 
-.service-left h3 {
-    display: inline-block; 
+.service-left h1 {
+    font-size: 20px; /* Taille de police de 20 pixels */
+    color: #1a1a1ac4; /* Couleur de texte bleu */
+    margin-top: 15px;
+}
+
+.service-right {
+    flex: 1;
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: -295px; 
+}
+
+.service-right h3 {
     font-size: 20px;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
-.service-left h3:nth-child(1) {
-    margin-left: 170px; 
+.service-left hr,
+.service-right hr {
+    margin-left: 10px; 
+    margin-right: 5px;
+    
 }
 
-.service-left h3:nth-child(2) {
-    margin-left: 30px; 
+.service-left h3:first-of-type {
+    margin-bottom: 5px; 
 }
 
-.service-left p {
-    margin-left: 135px; 
+.service-left h1:first-of-type {
+    margin-bottom: 15px; 
+}
+
+.horaire-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.day {
+    text-align: left;
+    font-weight: bold;
+}
+.hours {
+    text-align: right;
+    font-style: italic;
+}
+
+.horaire-box .thin {
+    grid-column: span 2;
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
 }
 
 .info-box {
     background-color: white;
     border-radius: 15px;
-    padding: 15px; 
-    margin-top: 20px;
-    margin-left: 130px;
-    width: 80%; 
-    max-width: 700px; 
-    /*height: 200px; 
-    overflow-y: auto; /* Défilement vertical si nécessaire */
+    padding: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-box hr {
+     margin-top: 20px;
 }
 
 .info-box p {
@@ -271,12 +344,12 @@
 }
 
 .reduire {
-    color: red; 
-    cursor: pointer; 
+    color: red;
+    cursor: pointer;
 }
 
 .autre-proposition {
-    margin: 0; 
+    margin: 0;
     display: none;
 }
 
@@ -284,24 +357,27 @@
     display: block;
 }
 
-.content {
-    flex: 1; 
-    display: grid;
-}
 
 
-/*Horaire*/
 
-.opening-hours {
+
+
+
+
+
+
+
+
+/*.opening-hours {
     background-color: white;
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    top: 85%;
-    right: 20px;
+    position: absolute;
+    top: 10px;
+    right: 20%;
     transform: translateY(-50%);
-    z-index: 999; /* Assure que la boîte s'affiche au-dessus du contenu si nécessaire */
+    z-index: 999; 
 }
 
 .opening-hours h3 {
@@ -311,9 +387,7 @@
 
 .opening-hours p {
     margin-bottom: 5px;
-}
-
-
+}*/
 
 /*.localisation {
     margin-top: 50px; 
