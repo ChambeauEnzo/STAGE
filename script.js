@@ -36,21 +36,21 @@ function closeModal() {
 document.addEventListener("DOMContentLoaded", function() {
     const voirPlusLink = document.getElementById("voir-plus");
     const reduireText = document.querySelector(".reduire");
-    let propositionsInitiales = []; // Tableau pour stocker les éléments supplémentaires initiaux
 
     voirPlusLink.addEventListener("click", function(event) {
         event.preventDefault();
 
         const autresPropositions = document.querySelectorAll(".info-box .autre-proposition");
+        const autresLignes = document.querySelectorAll(".info-box .thin");
 
-        // Enregistrer l'état initial des éléments supplémentaires
-        autresPropositions.forEach(function(paragraph) {
-            propositionsInitiales.push(paragraph);
-        });
-
-        // Afficher les éléments supplémentaires
         autresPropositions.forEach(function(paragraph) {
             paragraph.style.display = "block";
+        });
+
+        autresLignes.forEach(function(line) {
+            if (line.nextElementSibling && line.nextElementSibling.classList.contains('autre-proposition')) {
+                line.style.display = "block";
+            }
         });
 
         voirPlusLink.style.display = "none";
@@ -60,14 +60,23 @@ document.addEventListener("DOMContentLoaded", function() {
     reduireText.addEventListener("click", function(event) {
         event.preventDefault();
 
-        // Rétablir l'état initial des éléments supplémentaires
-        propositionsInitiales.forEach(function(paragraph) {
+        const autresPropositions = document.querySelectorAll(".info-box .autre-proposition");
+        const autresLignes = document.querySelectorAll(".info-box .thin");
+
+        autresPropositions.forEach(function(paragraph) {
             paragraph.style.display = "none";
+        });
+
+        autresLignes.forEach(function(line) {
+            if (line.nextElementSibling && line.nextElementSibling.classList.contains('autre-proposition')) {
+                line.style.display = "none";
+            }
         });
 
         voirPlusLink.style.display = "block";
         reduireText.style.display = "none"; // Masque le message de réduction
     });
 });
+
 
 

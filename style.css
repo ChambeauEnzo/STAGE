@@ -116,6 +116,12 @@
    left: 300px;
 }
 
+.ssalon h3 {
+    font-family: Arial, sans-serif; 
+    font-weight: normal; 
+    font-size: 20px; 
+}
+
 .salon p{
     position: relative;
     top: 5px;
@@ -254,7 +260,7 @@
 
 .service-left {
     flex: 1;
-    margin-top: -360px;
+    margin-top: -330px;
 }
 
 .service-left h3{
@@ -276,7 +282,7 @@
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: -295px; 
+    margin-top: -275px; 
 }
 
 .service-right h3 {
@@ -360,34 +366,6 @@
 
 
 
-
-
-
-
-
-
-
-
-/*.opening-hours {
-    background-color: white;
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: 10px;
-    right: 20%;
-    transform: translateY(-50%);
-    z-index: 999; 
-}
-
-.opening-hours h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.opening-hours p {
-    margin-bottom: 5px;
-}*/
 
 /*.localisation {
     margin-top: 50px; 
