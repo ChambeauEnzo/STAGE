@@ -260,7 +260,7 @@
 
 .service-left {
     flex: 1;
-    margin-top: -330px;
+    margin-top: -305px;
 }
 
 .service-left h3{
@@ -282,7 +282,7 @@
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: -275px; 
+    margin-top: -265px; 
 }
 
 .service-right h3 {
@@ -364,53 +364,78 @@
 }
 
 
+/*localisation*/
 
-
-
-/*.localisation {
-    margin-top: 50px; 
+.localisation-section {
+    background-color: #e2e2e2c2; 
+    margin-top: 0;
 }
 
-.localisation h3 {
-    margin-left: 100px; 
+.localisation-text {
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 145px;
+    color: #1a1a1ac4;
 }
 
-.localisation p {
-    font-size: 14px; 
-    margin-left: 120px;
+.localisation-text .address {
+    font-size: 16px;
+    font-weight: normal;
+    color: #1a1a1a;
+    margin-top: 7px; 
+    margin-left: 10px;
+}
+
+.map-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 50px; 
+}
+
+.map-container iframe {
+    width: 80%; 
+    height: 450px;
+    border: 0; /* Enlève la bordure de l'iframe */
+    border-radius: 10px; 
 }
 
 
-.localisation img {
-    max-width:70%; 
-    height: auto; 
-    display: block; 
-    margin: 0 auto; 
-    width: 60%; 
+/*fond de page*/
+
+footer {
+    background-color: #cc0202;
+    color: #fff;
+    padding: 20px 0;
 }
 
-.info-box {
-    background-color: #f0f0f0; 
-    border: 1px solid #ccc; 
-    border-radius: 5px; 
-    padding: 10px; 
-    width: 60%; 
-    margin: 0 auto; 
-    text-align: left; 
+.footer-content,
+.footer-social {
+    width: 50%;
+    float: left;
 }
 
-.container h3 {
-    margin-left: 100px;
+.footer-content p,
+.footer-social p {
+    font-weight: bold;
 }
 
-.basdepage {
-    margin-top: 50px; /
-    margin-bottom: 0px; 
+.footer-social {
+    text-align: right;
 }
 
-.page-border {
-    border-top: 300px solid #ccc; 
-    background-color: #f0f0f0; 
-    width: 100%; 
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-social ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.footer-social ul li:last-child {
+    margin-right: 0;
 }
 

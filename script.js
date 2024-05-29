@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-
 //image fond//
 
 // Fonction pour ouvrir la modale avec une liste d'images
@@ -24,14 +23,12 @@ function openModal(imageList) {
     document.body.classList.add("blur"); // Ajouter une classe pour flouter le fond
 }
 
-
 // Fonction pour fermer la modale
 function closeModal() {
     var modal = document.getElementById("modal");
     modal.style.display = "none";
     document.body.classList.remove("blur"); // Retirer la classe pour enlever le flou
 }
-
 
 document.addEventListener("DOMContentLoaded", function() {
     const voirPlusLink = document.getElementById("voir-plus");
