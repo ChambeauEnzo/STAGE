@@ -368,7 +368,8 @@
 
 .localisation-section {
     background-color: #e2e2e2c2; 
-    margin-top: 0;
+    text-align: center; 
+    min-height: calc(72vh - 100px); 
 }
 
 .localisation-text {
@@ -404,38 +405,52 @@
 
 /*fond de page*/
 
-footer {
-    background-color: #cc0202;
-    color: #fff;
-    padding: 20px 0;
+.footer {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 40px 0;
+    text-align: center;
 }
 
 .footer-content,
 .footer-social {
-    width: 50%;
-    float: left;
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
 }
 
-.footer-content p,
-.footer-social p {
-    font-weight: bold;
+.footer-content h3,
+.footer-social h3 {
+    border-bottom: 2px solid #000000;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-.footer-social {
-    text-align: right;
+.footer-content p {
+    margin-bottom: 10px;
 }
 
-.footer-social ul {
+.social-icons {
     list-style: none;
     padding: 0;
 }
 
-.footer-social ul li {
-    display: inline;
+.social-icons li {
+    display: inline-block;
     margin-right: 10px;
 }
 
-.footer-social ul li:last-child {
+.social-icons li:last-child {
     margin-right: 0;
 }
+
+.social-icons a {
+    color: #000000;
+    font-size: 24px;
+}
+
+.social-icons a:hover {
+    color: #000000;
+}
+
 
