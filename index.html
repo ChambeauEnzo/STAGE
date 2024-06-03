@@ -12,18 +12,19 @@
 <body>
 
     <header>
-
+        
     <nav class="navbar">
         <a href="#" class="logo">Espace ISA' PHIL coiffure</a>
         <div class="nav-links">
             <ul>
-                <li><a href="#">Salon</a></li>
-                <li><a href="#">Coiffure</a></li>
-                <li><a href="#">Horaires</a></li>
-                <li><a href="#">Localisation</a></li>
-                <li><a href="#">A propos</a></li>
+                <li><a href="##salon-images">Salon</a></li>
+                <li><a href="#service">Services</a></li>
+                <li><a href="#Horaires">Horaires</a></li>
+                <li><a href="#Localisation">Localisation</a></li>
+                <li><a href="#A propos">A propos</a></li>
             </ul>
         </div>
+    </div>
         <img src="image/mnug.jpg" alt="menu deroule" class="menu-deroule">
     </nav>    
 
@@ -31,7 +32,7 @@
     </section>
 
 
-     <div class="salon"> 
+    <div id="salon-images" class="salon">
         <h2>Espace ISA' PHIL coiffure</h2>
         <h3>Salon Climatisé</h3>
         <p>40 bis rue Jean Juarés, 80170 Rosiere en Santerre</p>
@@ -47,11 +48,11 @@
         </div>
         <div class="small-images">
             <img src="image/22.jpg" alt="Petite Image 3">
-            <img src="image/32.jpg" alt="Image 1" onclick="openModal(['image/11.jpg', 'image/44.jpg', 'image/33.jpg', 'image/22.jpg', 'image/55.jpg'])">
+
+            <img src="image/flou.png" alt="Image 1" onclick="openModal(['image/11.jpg', 'image/44.jpg', 'image/33.jpg', 'image/22.jpg', 'image/55.jpg'])">
             <div id="modal" class="modal">
                 <span class="close" onclick="closeModal()">&times;</span>
                 <div id="modalContent" class="modal-content">
-
         </div>
     </div>
 </div>
@@ -60,8 +61,8 @@
        <section class="content">
        <div class="service">
            <div class="service-left">
-               <h3>Services</h3>
-              <h3>Horaires</h3>
+            <h3 id="service">Services</h3>
+              <h3 id="Horaires">Horaires</h3>
               <hr>
              <h1>Choix de la Prestation</h1>
                     <div class="info-box">
@@ -118,7 +119,7 @@
 
         <section class="localisation-section">
         <div class="localisation-text">
-            <p>Localisation</p>
+            <p id="Localisation">Localisation</p>
             <p class="address">40 bis rue Jean Juarés, 80170 Rosiere en Santerre</p>
             <div class="map-container">
                 <iframe
@@ -132,30 +133,40 @@
                     tabindex="0"
                 ></iframe>
         </div>
-    </section> 
+    </div>
+</section>
+
+
+       <section class="content">
+            <div id='A propos' class="propos">
+            <div class="propos-left">
+                <h1>A propos</h1>
+            <div class="propos-box">
+                <p>Un salon de coiffure pour hommes et femmes offrant un service de qualité vous attend. </p>
+                <p>Venez découvrir l'expertise de nos coiffeurs entièrement dévoués à réaliser vos souhaits</p>
+                <p>Que vous recherchiez un changement radical ou simplement une touche de fraîcheur,notre équipe est là pour vous.</p>
+                <p>Au plaisir de vous accueillir très bientôt !</p>
+                <p>Mr Trevcon, Mme .....</p>
+            </div>
+          </div>
+        </div>
+       </section>     
+            
 
     <div id="scrollToTop" class="scroll-to-top">
         <i class="fas fa-arrow-up"></i>
     </div>
      
-    <!--<footer class="footer">
+
+    <footer class="footer">
         <div class="footer-container">
             <div class="footer-content">
                 <h3>Contactez-nous</h3>
                 <p>Email : <a href="mailto:example@example.com">example@example.com</a></p>
                 <p>Téléphone : <a href="tel:+123456789">+123456789</a></p>
                 <p>Adresse : 40 bis rue Jean Juarés, 80170 Rosiere en Santerre</p>
-            </div>
-            <div class="footer-social">
-                <h3>Suivez-nous</h3>
-                <ul class="social-icons">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                </ul>
-            </div>
+            </div>        
         </div>
-    </footer>--!>
-
+    </footer>
 </body>
 </html>
