@@ -128,53 +128,41 @@
     left: 15px;
  }
 
-.gallery {
+ .gallery {
     display: flex;
     justify-content: center;
-    margin-top: 90px;
-}
-
-.large-image {
-    flex: 0.5; 
+    align-items: center;
+    margin-top: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .large-image img {
-    width: 100%; 
+    width: 600px; 
+    height: 400px; 
     display: block;
-    border-radius: 10px; 
+    border-radius: 10px;
 }
 
 .small-images {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 310px;  
-    margin-bottom:20px;
-}
-
-.gallery img {
-    width: 600px; 
+    width: 300px;
+    gap: 10px;
+    margin-left: 15px;
 }
 
 .small-images img {
     width: 300px; 
+    height: 193px; 
 }
 
 .gallery img,
 .small-images img {
-    border-radius: 5px; 
-}
-
-.image-flouter {
-    position: relative;
-    display: inline-block;
-}
-
-.image-flouter img {
-    display: block;
-    width: 97%;
-    height: auto;
-    border-radius: 5px;
+    border-radius: 10px; 
 }
 
 .blur-overlay {
@@ -199,8 +187,7 @@
     text-align: center;
 }
 
-
-/*imagefond*/
+/*fond*/
 
 .modal {
     display: none;
@@ -228,7 +215,7 @@
     margin: 20px auto; /* Ajouter de l'espace entre les images */
     max-width: 100%; 
     max-height: 100%; 
-    width: 40%; /* Augmenter la taille de l'image */
+    width: 50%; /* Ajuster la taille de l'image à la largeur de la modale */
     height: auto; 
 }
 
@@ -245,6 +232,11 @@
 .close:hover {
     color: #000000; 
 }
+
+
+
+
+
 
 
 /*coiffure*/
