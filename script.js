@@ -96,3 +96,22 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const largeImage = document.querySelector('.large-image img');
+    const images = ['image/11.jpg', 'image/55.jpg',"image/32.jpg", "image/22.jpg"]; // Ajoutez ici les chemins de vos autres images
+    let currentIndex = 0;
+
+    function showImage(index) {
+        largeImage.src = images[index];
+    }
+
+    document.querySelector('.arrow.left').addEventListener('click', function() {
+        currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+        showImage(currentIndex);
+    });
+
+    document.querySelector('.arrow.right').addEventListener('click', function() {
+        currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+        showImage(currentIndex);
+    });
+});

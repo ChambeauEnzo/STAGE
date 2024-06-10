@@ -239,6 +239,42 @@
     color: #000000; 
 }
 
+/*fleche*/
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 30px;
+    width: 40px;
+    height: 45px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    opacity: 2;
+    transition: opacity 0.3s ease;
+}
+
+.arrow:hover {
+    opacity: 1;
+}
+
+.left {
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.right {
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+
 /*Resposive*/
 
 @media screen and (max-width: 1260px) {
@@ -255,11 +291,26 @@
 
 @media screen and (max-width: 950px) {
     .large-image img{
-     
+        overflow: hidden;
+        width: 95vw;
      }
+     .large-image {
+        display: flex;
+        justify-content: center;
+    }
 }
 
+@media screen and (max-width: 950px) {
+    .arrow {
+        display: block; /* Afficher les flèches */
+    }
+}
 
+@media screen and (min-width: 951px) {
+    .arrow {
+        display: none; /* Masquer les flèches */
+    }
+}
 
 
 /*coiffure
