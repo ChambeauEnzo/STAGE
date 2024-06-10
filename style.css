@@ -3,6 +3,7 @@
 * {
     margin: 0;
     padding: 0;
+
     text-decoration: none;
     list-style: none;
  }
@@ -140,13 +141,14 @@
 }
 
 .large-image img {
-    width: 600px; 
-    height: 400px; 
+    width: 610px; 
+    height: 410px; 
     display: block;
     border-radius: 10px;
 }
 
-.small-images {
+.small-images,
+.smalle-images {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -155,24 +157,28 @@
     margin-left: 15px;
 }
 
-.small-images img {
+.small-images img,
+.smalle-images img {
     width: 300px; 
-    height: 193px; 
+    height: 192px; 
 }
 
 .gallery img,
-.small-images img {
+.small-images img,
+.smalle-images {
     border-radius: 10px; 
 }
 
+
+ /*autre*/
 .blur-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 97%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Fond noir avec une opacité de 0.5 */
-    backdrop-filter: blur(10px); /* Ajoute un flou à l'arrière-plan */
+    background: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(10px); 
     border-radius: 5px;
 }
 
@@ -197,9 +203,9 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.89); /* Fond sombre semi-transparent */
+    background-color: rgba(0, 0, 0, 0.89); 
     overflow: auto;
-    backdrop-filter: blur(10px); /* Ajoute un flou au fond */
+    backdrop-filter: blur(10px); 
 }
 
 .modal-content {
@@ -212,10 +218,10 @@
 
 .modal-content img {
     display: block;
-    margin: 20px auto; /* Ajouter de l'espace entre les images */
+    margin: 20px auto; 
     max-width: 100%; 
     max-height: 100%; 
-    width: 50%; /* Ajuster la taille de l'image à la largeur de la modale */
+    width: 50%; 
     height: auto; 
 }
 
@@ -233,13 +239,30 @@
     color: #000000; 
 }
 
+/*Resposive*/
+
+@media screen and (max-width: 1260px) {
+    .smalle-images {
+         display: none; 
+     }
+}
+
+@media screen and (max-width: 950px) {
+    .small-images {
+         display: none;
+     }
+}
+
+@media screen and (max-width: 950px) {
+    .large-image img{
+     
+     }
+}
 
 
 
 
-
-
-/*coiffure*/
+/*coiffure
 
 .service {
     display: flex;
@@ -264,8 +287,8 @@
 }
 
 .service-left h1 {
-    font-size: 20px; /* Taille de police de 20 pixels */
-    color: #1a1a1ac4; /* Couleur de texte bleu */
+    font-size: 20px; 
+    color: #1a1a1ac4; 
     margin-top: 15px;
 }
 
@@ -357,7 +380,7 @@
 }
 
 
-/*localisation*/
+/*localisation
 
 .localisation-section {
     background-color: #e2e2e2c2; 
@@ -391,11 +414,11 @@
 .map-container iframe {
     width: 80%; 
     height: 450px;
-    border: 0; /* Enlève la bordure de l'iframe */
+    border: 0; 
     border-radius: 10px; 
 }
 
-/*flechescroll*/
+/*flechescroll
 
 .scroll-to-top {
     position: fixed;
@@ -432,7 +455,7 @@
 
 
 
-/*bulle a propos*/
+/*bulle a propos*
 
 .propos {
     display: flex;
@@ -461,7 +484,7 @@
     border-radius: 10px; 
     padding: 18px; 
     width: 570px;
-    margin-bottom: 50px; /* espace en dessous de la bulle */ 
+    margin-bottom: 50px; /* espace en dessous de la bulle *
 }
 
 .propos-box p {
@@ -470,7 +493,7 @@
 }
 
 
-/*fond de page*/
+/*fond de page*
 
 .footer {
     background-color: #ffffff;
