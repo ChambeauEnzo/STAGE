@@ -514,6 +514,37 @@
     border-radius: 10px; 
 }
 
+@media screen and (max-width: 430px) {
+     .localisation-text {
+        text-align: left;
+        font-size: 20px;
+        font-weight: bold;
+        color: #1a1a1ac4;
+        margin-left: 15%;
+        margin-bottom: 10px; /* Ajoute un espace sous le texte */
+     }
+     .localisation-text .address {
+        font-size: 16px;
+        font-weight: normal;
+        color: #1a1a1a;
+        margin-top: 7px;
+        margin-left: 5px; 
+    }
+
+    .map-container {
+        display: flex;
+        justify-content: center; /* Centre la carte horizontalement */
+        margin-top: 20px; /* Ajoute un espace au-dessus de la carte */
+        margin-left: -14%;
+    }
+    .map-container iframe {
+        width: 83%;
+        height: 450px;
+        border: 0; 
+        border-radius: 10px; 
+    }
+}
+
 
 
 /*flechescroll*/
@@ -561,6 +592,7 @@
 
 .propos {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start; 
     align-items: flex-start; 
     background-color: #e2e2e2c2;
@@ -570,8 +602,8 @@
 
 .propos-left {
     flex: 1;
-    margin-top: 0;
-    margin-left: 310px; 
+    margin-top: 5%;
+    margin-left: 16.5%; 
 }
 
 .propos-left h1 {
@@ -585,8 +617,11 @@
     background-color: white;
     border-radius: 10px; 
     padding: 18px; 
-    width: 570px;
+    width: 90%;
+    max-width: 600px; 
+    margin: 0 auto;
     margin-bottom: 50px; 
+    margin-left: 0;
 }
 
 .propos-box p {
@@ -594,8 +629,29 @@
     line-height: 1.5; 
 }
 
+@media screen and (max-width: 430px) {
+    .propos-box {
+        background-color: white;
+        border-radius: 10px; 
+        padding: 18px; 
+        width: 90%;
+        max-width: 600px; 
+        margin: 0 auto;
+        margin-bottom: 50px; 
+        margin-left: -25px;  
+    }
+    .propos-left h1 {
+        font-size: 20px;
+        color: #1a1a1ac4;
+        margin-top: 0;
+        margin-bottom: 10px; 
+        margin-left: -13px;
+    }
+     
+} 
 
-/*fond de page*
+
+/*fond de page*/
 
 .footer {
     background-color: #ffffff;
