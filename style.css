@@ -36,7 +36,11 @@
      width: 100%;
      box-sizing:border-box;
  }
- 
+
+ .coiffure {
+    display: inline;
+}
+
  .navbar a {
      color: rgb(63, 62, 62);
  }
@@ -69,7 +73,7 @@
      
      .navbar .logo {
         position: absolute;
-        top: 40px;
+        top: 47px;
         left: 30px;
      }
  
@@ -107,6 +111,12 @@
          font-size: 1.2em;
      }
  }
+
+@media screen and (max-width: 480px) {
+        .coiffure {
+            display: none;
+        }
+}
 
 
 /*Salon*/
@@ -436,13 +446,6 @@
          }
 }
 
-
-
-
-
-
-
-
 /*@media screen and (max-width: 950px) {
     .service-left h3{
        display: none;
@@ -477,7 +480,6 @@
 
 .localisation-section {
     background-color: #e2e2e2c2;
-    text-align: center;
     min-height: calc(72vh - 100px);
 }
 
@@ -486,7 +488,7 @@
     font-size: 20px;
     font-weight: bold;
     color: #1a1a1ac4;
-    margin-left: 310px;
+    margin-left: 17%;
     margin-bottom: 10px; /* Ajoute un espace sous le texte */
 }
 
@@ -502,17 +504,19 @@
     display: flex;
     justify-content: center; /* Centre la carte horizontalement */
     margin-top: 20px; /* Ajoute un espace au-dessus de la carte */
-    margin-left: -310px;
+    margin-left: -20%;
 }
 
 .map-container iframe {
-    width:67%; 
+    width:67%;
     height: 450px;
     border: 0; 
     border-radius: 10px; 
 }
 
-/*flechescroll
+
+
+/*flechescroll*/
 
 .scroll-to-top {
     position: fixed;
@@ -547,9 +551,13 @@
     line-height: 40px; 
 }
 
+@media screen and (max-width: 950px) {
+       .scroll-to-top, .scrooll-to-top i, .scroll-to-top.hide, .scroll-to-top.show {
+            display: none;
+       }
+}
 
-
-/*bulle a propos*
+/*bulle a propos*/
 
 .propos {
     display: flex;
@@ -578,7 +586,7 @@
     border-radius: 10px; 
     padding: 18px; 
     width: 570px;
-    margin-bottom: 50px; /* espace en dessous de la bulle *
+    margin-bottom: 50px; 
 }
 
 .propos-box p {
