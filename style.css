@@ -112,15 +112,9 @@
 /*Salon*/
 
 .salon {
-   position: relative;
-   top: 60px;
-   left: 300px;
-}
-
-.ssalon h3 {
-    font-family: Arial, sans-serif; 
-    font-weight: normal; 
-    font-size: 20px; 
+   position: absolute;
+   top: -85px;
+   left: 5px;
 }
 
 .salon p{
@@ -312,11 +306,16 @@
     }
 }
 
+@media screen and (max-width: 950px) {
+    
+}
 
-/*coiffure
+
+/*coiffure*/
 
 .service {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start; 
     background-color: #e2e2e2c2;
@@ -431,39 +430,83 @@
 }
 
 
-/*localisation
+@media screen and (max-width: 1260px) {
+         .service {
+            
+         }
+}
+
+
+
+
+
+
+
+
+/*@media screen and (max-width: 950px) {
+    .service-left h3{
+       display: none;
+    }
+    .service-left hr {
+        display: none;
+    }
+
+    .service-left h1 {
+        margin-left: -120px;
+        font-size: 22px;
+    }
+}*/
+
+
+@media screen and (max-width: 1260px) {
+   
+}
+
+
+
+@media screen and (max-width: 950px) {
+    
+}
+
+
+
+
+
+
+/*localisation*/
 
 .localisation-section {
-    background-color: #e2e2e2c2; 
-    text-align: center; 
-    min-height: calc(72vh - 100px); 
+    background-color: #e2e2e2c2;
+    text-align: center;
+    min-height: calc(72vh - 100px);
 }
 
 .localisation-text {
     text-align: left;
     font-size: 20px;
     font-weight: bold;
-    margin-left: 145px;
     color: #1a1a1ac4;
+    margin-left: 310px;
+    margin-bottom: 10px; /* Ajoute un espace sous le texte */
 }
 
 .localisation-text .address {
     font-size: 16px;
     font-weight: normal;
     color: #1a1a1a;
-    margin-top: 7px; 
-    margin-left: 10px;
+    margin-top: 7px;
+    margin-left: 10px; 
 }
 
 .map-container {
     display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 50px; 
+    justify-content: center; /* Centre la carte horizontalement */
+    margin-top: 20px; /* Ajoute un espace au-dessus de la carte */
+    margin-left: -310px;
 }
 
 .map-container iframe {
-    width: 80%; 
+    width:67%; 
     height: 450px;
     border: 0; 
     border-radius: 10px; 
