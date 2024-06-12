@@ -369,7 +369,6 @@
 .service-right hr {
     margin-left: 10px; 
     margin-right: 5px;
-    
 }
 
 .service-left h3:first-of-type {
@@ -446,7 +445,7 @@
         border-radius: 15px;
         padding: 3%;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        margin-top: 60px; 
+        margin-top: 155px; 
         margin-left: -628px;
         margin-right: 50px;    
     }
@@ -511,20 +510,7 @@
         border-top: 1px solid #ccc;
         margin: 10px 0;
     }
-    
-    .reduire {
-        color: red;
-        cursor: pointer;
-    }
-    
-    .autre-proposition {
-        margin: 0;
-        display: none;
-    }
-    
-    .autre-proposition.visible {
-        display: block;
-    }
+     
 }
 
 
@@ -539,7 +525,6 @@
     .service-right hr {
         margin-left: 10px; 
         margin-right: 5px;
-        
     }
 
     .service-left h1 {
@@ -549,6 +534,82 @@
         margin-left: 20px;
     }
 }
+
+@media screen and (max-width: 950px) {
+    .service-right {
+        flex: 1;
+        background-color: white;
+        border-radius: 15px;
+        padding: 3%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 155px; 
+        margin-left: -560px;
+        margin-right: 50px;  
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .service-right {
+        flex: 1;
+        background-color: white;
+        border-radius: 15px;
+        padding: 7%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 155px; 
+        margin-left: -583px;
+        margin-right: -142px;    
+    }
+}
+
+
+
+@media screen and (max-width: 430px) {
+
+    .service-left h3 {
+    display: inline-block;
+    margin-left: -135px; /* Ajustez cette valeur pour déplacer les éléments vers la gauche */
+    margin-bottom: 0; /* Ajouter pour éviter tout espace supplémentaire si nécessaire */
+    padding-right: 20px; 
+    padding-left: 10px;
+    
+    }
+
+    #Horaires {
+        margin-left: -10px; /* Ajustez cette valeur pour positionner correctement l'élément 'Horaires' */
+    }
+
+    .service-left h1 {
+        font-size: 20px; 
+        color: #1a1a1ac4; 
+        margin-top: 15px;
+        margin-left: -130px;
+    }
+    .service-left hr {
+        margin-left: -130px; 
+        margin-right: 160px;
+    }
+
+    .info-box {
+        background-color: white;
+        border-radius: 15px;
+        padding: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-right: 126px;
+        margin-left: -142px;
+    }
+    .info-box hr {
+         margin-top: 20px;
+    }
+    .info-box p {
+        margin: 10px 0;
+    }
+    .info-box .thin {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 10px 0;
+    }
+}
+
 
 
 /*localisation*/
