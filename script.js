@@ -1,11 +1,20 @@
 document.addEventListener('DOMContentLoaded', function () {
     const menuHamburger = document.querySelector(".menu-deroule");
     const navLinks = document.querySelector(".nav-links");
+    const navItems = document.querySelectorAll(".nav-links ul li a");
 
     menuHamburger.addEventListener('click', () => {
         navLinks.classList.toggle('mobile-menu');
     });
+
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            navLinks.classList.remove('mobile-menu');
+        });
+    });
 });
+
+
 
 //image fond//
 
@@ -115,3 +124,4 @@ document.addEventListener("DOMContentLoaded", function() {
         showImage(currentIndex);
     });
 });
+
