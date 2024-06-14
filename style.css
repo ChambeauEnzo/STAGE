@@ -544,8 +544,9 @@
 
 }
 
+    /*Faire pour 770px et 820px  Format talbette */
 
-@media screen and (max-width: 1020px) {                /*Service     1020px*/
+@media screen and (max-width: 1020px) {                /*Pc    1020px*/                            
      
     .info-box {
         background-color: white;
@@ -568,7 +569,7 @@
     }
      
 }
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 1020px) {                /*Pc    1020px*/
 
     .service-right h3 {
         font-size: 20px;
@@ -588,9 +589,20 @@
         font-family: 'Arial', sans-serif; /* Changer la famille de police */
     }
 }
+@media screen and (max-width: 975px) {                 /*Pc    975px*/
 
-
-@media screen and (max-width: 950px) {
+    .service-right {
+        flex: 1;
+        background-color: rgb(255, 255, 255);
+        border-radius: 15px;
+        padding: 3%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        margin-top: 160px; 
+        margin-left: -580px;
+        margin-right: 50px;  
+    }
+}
+@media screen and (max-width: 950px) {                 /*Pc    950px*/
     .service-right {
         flex: 1;
         background-color: rgb(255, 255, 255);
@@ -601,12 +613,11 @@
         margin-left: -560px;
         margin-right: 50px;  
     }
-}
+} 
 
 
 
-
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 430px) {                 /*telephone    430px*/
     .service-right {
         flex: 1;
         background-color: white;
@@ -735,7 +746,7 @@
     .map-container {
         display: flex;
         justify-content: center; /* Centre la carte horizontalement */
-        margin-top: 20px; /* Ajoute un espace au-dessus de la carte */
+        margin-top: 5px; /* Ajoute un espace au-dessus de la carte */
         margin-left: -10%;
         margin-right: -37px;
     }
@@ -790,6 +801,7 @@
        }
 }
 
+
 /*bulle a propos*/
 
 .propos {
@@ -800,11 +812,12 @@
     background-color: #e2e2e2c2;
     padding: 5px;
     text-align: left;
+    
 }
 
 .propos-left {
     flex: 1;
-    margin-top: 5%;
+    margin-top: 1%;
     margin-left: 16.5%; 
 }
 
