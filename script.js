@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-
 //image fond//
 
 // Fonction pour ouvrir la modale avec une liste d'images
@@ -125,3 +124,16 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleHoraires = document.getElementById('toggle-horaires');
+    const horairesBox = document.getElementById('horaires');
+
+    toggleHoraires.addEventListener('click', function() {
+        if (horairesBox.style.display === 'none') {
+            horairesBox.style.display = 'block';
+        } else {
+            horairesBox.style.display = 'none';
+        }
+    });
+});
