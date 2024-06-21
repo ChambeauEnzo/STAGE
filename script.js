@@ -124,16 +124,28 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
 document.addEventListener('DOMContentLoaded', function() {
-    const toggleHoraires = document.getElementById('toggle-horaires');
-    const horairesBox = document.getElementById('horaires');
+    const jours = document.querySelectorAll('.horaire-box .day');
+    const jourDeLaSemaine = (new Date()).getDay(); // Obtenir le jour de la semaine actuel (0 pour dimanche, 1 pour lundi, etc.)
 
-    toggleHoraires.addEventListener('click', function() {
-        if (horairesBox.style.display === 'none') {
-            horairesBox.style.display = 'block';
-        } else {
-            horairesBox.style.display = 'none';
+    // Tableau des jours de la semaine en français
+    const joursSemaine = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+
+    // Parcourir tous les éléments .day et comparer avec le jour actuel
+    jours.forEach(function(jour, index) {
+        if (jour.textContent === joursSemaine[jourDeLaSemaine]) {
+            jour.classList.add('aujourdhui'); // Ajouter la classe aujourdhui pour mettre en gras
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('horaire-toggle').addEventListener('click', function() {
+                var horaireBox = document.querySelector('.horaire-box');
+                if (horaireBox.style.display === 'none' || horaireBox.style.display === '') {
+                    horaireBox.style.display = 'block';
+                } else {
+                    horaireBox.style.display = 'none';
+                }
+            });
+        });
