@@ -1,111 +1,85 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const menuHamburger = document.querySelector(".menu-deroule");
-    const navLinks = document.querySelector(".nav-links");
-    const navItems = document.querySelectorAll(".nav-links ul li a");
-
-    menuHamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('mobile-menu');
-    });
-
-    navItems.forEach(item => {
-        item.addEventListener('click', () => {
-            navLinks.classList.remove('mobile-menu');
-        });
-    });
-});
-
-
-//image fond//
-
-// Fonction pour ouvrir la modale avec une liste d'images
-function openModal(imageList) {
-    var modal = document.getElementById("modal");
-    var modalContent = document.getElementById("modalContent");
-    modalContent.innerHTML = ""; // Vide le contenu de la modale
-    imageList.forEach(function(imageSrc) {
-        var image = document.createElement("img");
-        image.src = imageSrc;
-        modalContent.appendChild(image);
-    });
-    modal.style.display = "block";
-    document.body.classList.add("blur"); // Ajouter une classe pour flouter le fond
-}
-
-// Fonction pour fermer la modale
-function closeModal() {
-    var modal = document.getElementById("modal");
-    modal.style.display = "none";
-    document.body.classList.remove("blur"); // Retirer la classe pour enlever le flou
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-    const voirPlusLink = document.getElementById("voir-plus");
-    const reduireText = document.querySelector(".reduire");
-
-    voirPlusLink.addEventListener("click", function(event) {
-        event.preventDefault();
-
-        const autresPropositions = document.querySelectorAll(".info-box .autre-proposition");
-        const autresLignes = document.querySelectorAll(".info-box .thin");
-
-        autresPropositions.forEach(function(paragraph) {
-            paragraph.style.display = "block";
-        });
-
-        autresLignes.forEach(function(line) {
-            if (line.nextElementSibling && line.nextElementSibling.classList.contains('autre-proposition')) {
-                line.style.display = "block";
-            }
-        });
-
-        voirPlusLink.style.display = "none";
-        reduireText.style.display = "block"; // Affiche le message de réduction
-    });
-
-    reduireText.addEventListener("click", function(event) {
-        event.preventDefault();
-
-        const autresPropositions = document.querySelectorAll(".info-box .autre-proposition");
-        const autresLignes = document.querySelectorAll(".info-box .thin");
-
-        autresPropositions.forEach(function(paragraph) {
-            paragraph.style.display = "none";
-        });
-
-        autresLignes.forEach(function(line) {
-            if (line.nextElementSibling && line.nextElementSibling.classList.contains('autre-proposition')) {
-                line.style.display = "none";
-            }
-        });
-
-        voirPlusLink.style.display = "block";
-        reduireText.style.display = "none"; // Masque le message de réduction
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-    const scrollToTopButton = document.getElementById('scrollToTop');
-
-    window.addEventListener('scroll', function () {
-        if (window.scrollY > 200) {
-            scrollToTopButton.classList.add('show');
-            scrollToTopButton.classList.remove('hide');
-        } else {
-            scrollToTopButton.classList.add('hide');
-            scrollToTopButton.classList.remove('show');
+  // Scroll doux vers les sections //
+  document.querySelectorAll('a.nav-link').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
         }
     });
+});
+                        
+  // image MODAL //
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("photoModal");
+    const trigger = document.querySelector(".photo-gallery-trigger img");
+    const closeModal = document.getElementById("closeModal");
+    const body = document.body; // Référence au body du document
 
-    scrollToTopButton.addEventListener('click', function () {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+    // Ouvre la galerie modale
+    trigger.addEventListener("click", () => {
+        modal.style.display = "flex"; // Affiche la modale
+        body.style.overflow = "hidden"; // Empêche le défilement de la page principale
+    });
+
+    // Ferme la galerie modale lorsque la croix est cliquée
+    closeModal.addEventListener("click", () => {
+        modal.style.display = "none"; // Cache la modale
+        body.style.overflow = "auto"; // Réactive le défilement de la page principale
+    });
+});
+                               
+  // horaire //
+document.addEventListener("DOMContentLoaded", function() {
+    const today = new Date(); // Récupère la date actuelle
+    const jours = ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"];
+    const jourActuel = jours[today.getDay()]; // Récupère le jour de la semaine actuel
+
+    // Trouve tous les jours dans les horaires et applique une classe "highlight" au jour actuel
+    const joursElements = document.querySelectorAll('.jour');
+    
+    joursElements.forEach(function(jourElement) {
+        const jour = jourElement.getAttribute('data-jour');
+        if (jour === jourActuel) {
+            jourElement.classList.add('highlight'); // Ajoute une classe pour le jour actuel
+        } else {
+            jourElement.classList.remove('highlight'); // Retire la classe des autres jours
+        }
     });
 });
 
+  // Service et horaire //
+document.addEventListener("DOMContentLoaded", function () {
+    // Obtenir les boutons et les sections
+    const btnServices = document.getElementById("btn-services");
+    const btnHoraires = document.getElementById("btn-horaires");
+    const sectionServices = document.getElementById("services");
+    const sectionHoraires = document.getElementById("horaires");
+
+    // Fonction pour basculer entre les sections
+    function switchSection(showSection, hideSection, activeButton, inactiveButton) {
+        showSection.style.display = "block"; // Montrer la section active
+        hideSection.style.display = "none"; // Cacher l'autre section
+        activeButton.classList.add("active"); // Ajouter la classe active au bouton
+        inactiveButton.classList.remove("active"); // Supprimer la classe active de l'autre bouton
+    }
+
+    // Ajout des événements de clic
+    btnServices.addEventListener("click", function (e) {
+        e.preventDefault(); // Empêcher le comportement par défaut du lien
+        switchSection(sectionServices, sectionHoraires, btnServices, btnHoraires);
+    });
+
+    btnHoraires.addEventListener("click", function (e) {
+        e.preventDefault(); // Empêcher le comportement par défaut du lien
+        switchSection(sectionHoraires, sectionServices, btnHoraires, btnServices);
+    });
+});
+
+//  format telephone //
 document.addEventListener("DOMContentLoaded", function() {
-    const largeImage = document.querySelector('.large-image img');
+    const largeImage = document.querySelector('.salon-main-photo img');
     const images = ['image/11.jpg', 'image/55.jpg',"image/32.jpg", "image/22.jpg"]; // Ajoutez ici les chemins de vos autres images
     let currentIndex = 0;
 
@@ -123,29 +97,3 @@ document.addEventListener("DOMContentLoaded", function() {
         showImage(currentIndex);
     });
 });
-
-document.addEventListener('DOMContentLoaded', function() {
-    const jours = document.querySelectorAll('.horaire-box .day');
-    const jourDeLaSemaine = (new Date()).getDay(); // Obtenir le jour de la semaine actuel (0 pour dimanche, 1 pour lundi, etc.)
-
-    // Tableau des jours de la semaine en français
-    const joursSemaine = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
-
-    // Parcourir tous les éléments .day et comparer avec le jour actuel
-    jours.forEach(function(jour, index) {
-        if (jour.textContent === joursSemaine[jourDeLaSemaine]) {
-            jour.classList.add('aujourdhui'); // Ajouter la classe aujourdhui pour mettre en gras
-        }
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('horaire-toggle').addEventListener('click', function() {
-                var horaireBox = document.querySelector('.horaire-box');
-                if (horaireBox.style.display === 'none' || horaireBox.style.display === '') {
-                    horaireBox.style.display = 'block';
-                } else {
-                    horaireBox.style.display = 'none';
-                }
-            });
-        });

@@ -1,175 +1,224 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Espace ISA'PHIL Coiffure</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src='script.js'></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace ISA'PHIL coiffure</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Lien Bootstrap (pour responsivité) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-
-    <header>
-        
-    <nav class="navbar">
-        <a href="#" class="logo">Espace ISA' PHIL <span class="coiffure">coiffure</span></a>
-        <div class="nav-links" id="nav-links">
-            <ul>
-                <li><a href="##salon-images">Salon</a></li>
-                <li><a href="#service">Services</a></li>
-                <li><a href="#Horaires">Horaires</a></li>
-                <li><a href="#Localisation">Localisation</a></li>
-                <li><a href="#A propos">A propos</a></li>
-            </ul>
-        </div>
-    </div>
-        <img src="image/mnug.jpg" alt="menu deroule" class="menu-deroule">
-    </buttom>
-    </nav>    
-   
-
-    <section class="second-fond"></section>
-
-    <div class="gallery">
-        <div id="salon-images" class="salon">
-            <h2>Espace ISA' PHIL coiffure</h2>
-            <h3>Salon Climatisé</h3>
-            <p>40 bis rue Jean Jaurés, 80170 Rosières en Santerre</p>
-        </div> 
-
-        <div class="large-image">
-            <div class="arrow left">&lt;</div>
-            <img src="image/11.jpg" alt="Image 1" onclick="openModal('image/1.jpg')">
-            <div class="arrow right">&gt;</div>
-        </div>
-        <div class="smalle-images">
-            <img src="image/55.jpg" alt="Petite Image 1">
-            <img src="image/32.jpg" alt="Petite Image 2">
-        </div>
-        <div class="small-images">
-            <img src="image/22.jpg" alt="Petite Image 3">
-            <img src="image/noir.jpg" alt="Image 1" onclick="openModal(['image/11.jpg', 'image/44.jpg', 'image/33.jpg', 'image/22.jpg', 'image/55.jpg'])">
-        </div>
-    </div>
-
-    <div id="modal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <div id="modalContent" class="modal-content"></div>
-    </div>
- </header>
-
-       <section class="content">
-       <div class="service">
-           <div class="service-left">
-            <h3 id="service">Services</h3>
-              <h3 id="Horaires">Horaires</h3>
-              <hr>
-             <h1>Choix de la Prestation</h1>
-                    <div class="info-box">
-                             <p>Salon expert Oréal Professionnel</p>
-                          <hr class="thin">
-                             <p>Coupe Femme</p>
-                          <hr class="thin">
-                             <p>Brushing</p>
-                          <hr class="thin">
-                             <p>Méches / Balayage</p>
-                          <hr class="thin">
-                             <p>Coloration</p>
-                          <hr class="thin">
-                    
-                       <p class="autre-proposition" style="display: none;">Coupe Homme / Enfant</p>
-                       <hr class="thin" style="display: none;">
-                       <p class="autre-proposition" style="display: none;">Lissage Steampood</p>
-                       <hr class="thin" style="display: none;">
-                       <p class="autre-proposition" style="display: none;">Permanente</p>
-                       <hr class="thin" style="display: none;">
-                       <a href="#" id="voir-plus">Voir les 3 autres propositions</a>
-                       <p class="reduire" style="display: none;">Réduire les autres propositions</p>        
-                    </div>
-                </div>
-           
-            <div class="service-right">
-                <div id="horaire-toggle">
-                    <h3>Horaires d'ouverture</h3>
-                </div>
-                <div class="horaire-box">
-                    <div class="day">Lundi</div>
-                    <div class="hours">Fermé</div>
-                    <hr class="thin">
-                    <div class="day">Mardi</div>
-                    <div class="hours">8h30 - 12h /  13h30 - 19h</div>
-                    <hr class="thin">
-                    <div class="day">Mercredi</div>
-                    <div class="hours">8h30 - 12h /  13h30 - 19h</div>
-                    <hr class="thin">
-                    <div class="day">Jeudi</div>
-                    <div class="hours">8h30 - 12h /  13h30 - 19h</div>
-                    <hr class="thin">
-                    <div class="day">Vendredi</div>
-                    <div class="hours">8h30 - 12h /  13h30 - 19h</div>
-                    <hr class="thin">
-                    <div class="day">Samedi</div>
-                    <div class="hours">9h - 17h</div>
-                    <hr class="thin">
-                    <div class="day">Dimanche</div>
-                    <div class="hours">Fermé</div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Espace ISA'PHIL coiffure</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav text-center">
+                        <li class="nav-item"><a class="nav-link" href="#salon">Salon</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#horaires">Horaires</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#localisation">Localisation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#apropos">À propos</a></li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </section> 
+        </nav>
+        <main class="container mt-5">
+            <section id="salon" class="salon-section active-section">
+                <div class="salon-container">
+                    <!-- Image principale avec texte en haut à gauche -->
+                    <div class="salon-main-photo-container">
+                        <!-- Texte au-dessus de l'image -->
+                        <div class="salon-main-text">
+                            <h1>Espace ISA' PHIL coiffure</h1>
+                            <p>Salon Climatisé</p>
+                            <div class="adresse">
+                            <p>
+                                <i class="fa-solid fa-location-dot"></i>
+                                <a href="https://www.google.com/maps/search/?q=40+bis+rue+Jean+Jaurès,+80170+Rosières+en+Santerre" target="_blank">
+                                    40 bis rue Jean Jaurès, 80170 Rosières en Santerre
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    
+                        <!-- Image principale à gauche et images à droite -->
+                        <div class="salon-images">
+                            <!-- Image principale à gauche -->
+                            <div class="salon-main-photo">
+                                <div class="arrow left">&lt;</div>
+                                <img src="image/11.jpg" alt="Intérieur du salon">
+                                <div class="arrow right">&gt;</div>
+                            </div>
+            
+                            <!-- Galerie d'images à droite -->
+                            <div class="salon-side-gallery">
+                                <div class="side-image-row">
+                                    <img src="image/22.jpg" alt="Façade du salon">
+                                    <img src="image/32.jpg" alt="Postes de coiffure">
+                                </div>
+                                <div class="side-image-row">
+                                    <img src="image/55.jpg" alt="Produits capillaires">
+                            <!-- Déclencheur modale -->
+                            <div class="photo-gallery-trigger">
+                                    <img src="image/noir.jpg" alt="Voir toutes les images">
+                                </div>
+                            </div>
+                            
+                    <!-- Nouvelle fonctionnalité : Voir toutes les photos -->
+                     <div class="photo-modal" id="photoModal">
+                         <div class="photo-modal-content">
+                         <span class="close-modal" id="closeModal">&times;</span>
+                                <div class="photo-grid">
+                                    <img src="image/22.jpg" alt="Façade du salon">
+                                    <img src="image/33.jpg" alt="Postes de coiffure">
+                                    <img src="image/55.jpg" alt="Produits capillaires">
+                                    <img src="image/11.jpg" alt="shampoings">
+                                    <img src="image/44.jpg" alt="Autre image">
+                                </div>
+                            </div>
+                        </div>
+                        
+                </section>            
 
-        <section class="localisation-section">
-        <div class="localisation-text">
-            <p id="Localisation">Localisation</p>
-            <p class="address">40 bis rue Jean Jaurés, 80170 Rosières en Santerre</p>
+                <div class="section-navigation">
+                    <a href="#" id="btn-services" class="active">Services</a>
+                    <a href="#" id="btn-horaires">Horaires</a>
+                </div>
+                    
+                <section id="services" class="mb-5" style="display: block;">
+                    <h2>Choix de la prestation</h2>
+                    <p>Découvrez nos services : coupes, couleurs, soins capillaires, et bien plus.</p>
+                    
+                    <!-- Conteneur des cartes de services -->
+                    <div class="services-cards">
+                        <div class="service-card"data-text="Une expertise unique pour sublimer vos cheveux.">
+                            <h3>Salon expert Oréal Professionnel</h3>
+                            <p>Une expertise unique pour sublimer vos cheveux.</p>
+                        </div>
+                        <div class="service-card">
+                            <h3>Coupe Femme</h3>
+                            <p>Des coupes modernes adaptées à vos envies.</p>
+                        </div>
+                        <div class="service-card">
+                            <h3>Brushing</h3>
+                            <p>Un coiffage impeccable pour toutes les occasions.</p>
+                        </div>
+                        <div class="service-card">
+                            <h3>Mèches / Balayage</h3>
+                            <p>Des nuances lumineuses pour vos cheveux.</p>
+                        </div>
+                        <div class="service-card">
+                            <h3>Coloration</h3>
+                            <p>Des couleurs éclatantes et durables.</p>
+                        </div>
+                        <div class="service-card">
+                            <h3>Coupe Homme / Enfant</h3>
+                            <p>Des coupes adaptées à tous les styles et âges.</p>
+                        </div>
+                        <div class="service-card">
+                            <h3>Lissage Steampood</h3>
+                            <p>Un lissage doux et respectueux des cheveux</p>
+                        </div>
+                        <div class="service-card">
+                            <h3>Permanente</h3>
+                            <p>Des boucles durables et naturelles.</p>
+                        </div>
+                         <!-- Conteneur pour le texte affiché -->
+                    </div>
+                </section>                
 
+        <section id="horaires" class="mb-5" style="display: none;">
+            <h2>Horaires</h2>
+            <p>Nous sommes ouverts du mardi au samedi entre 8h30 et 19h.</p>
+            
+            <!-- Conteneur pour les horaires -->
+            <div class="horaires-cards">
+                <div class="horaires-card closed">
+                    <h3 class="jour" data-jour="lundi">Lundi</h3>
+                    <p class="horaire-matin">Ferme</p>
+                    <p class="horaire-apres-midi"></p>
+                </div>
+                <div class="horaires-card">
+                    <h3 class="jour" data-jour="Mardi">Mardi</h3>
+                    <p class="horaire-matin">8h30 - 12h00</p>
+                    <p class="horaire-apres-midi">13h30 - 18h30</p>
+                </div>
+                
+                <div class="horaires-card">
+                    <h3 class="jour" data-jour="mercredi">Mercredi</h3>
+                    <p class="horaire-matin">8h30 - 12h00</p>
+                    <p class="horaire-apres-midi">13h30 - 18h30</p>
+                </div>
+                <div class="horaires-card">
+                    <h3 class="jour" data-jour="jeudi">Jeudi</h3>
+                    <p class="horaire-matin">8h30 - 12h00</p>
+                    <p class="horaire-apres-midi">13h30 - 18h30</p>
+                </div>
+                <div class="horaires-card">
+                    <h3 class="jour" data-jour="vendredi">Vendredi</h3>
+                    <p class="horaire-matin">8h30 - 12h00</p>
+                    <p class="horaire-apres-midi">13h30 - 18h30</p>
+                </div>
+                <div class="horaires-card">
+                    <h3 class="jour" data-jour="samedi">Samedi</h3>
+                    <p class="horaire-matin">8h00 - 17h00</p>
+                </div>
+                <div class="horaires-card closed">
+                    <h3 class="jour" data-jour="dimanche">Dimanche</h3>
+                    <p class="horaire-matin">Ferme</p>
+                    <p class="horaire-apres-midi"></p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="localisation" class="mb-5 active-section">
+            <div class="adresse">
+            <h2>Ou se situe le salon ?</h2>
+        <p>
+            <i class="fa-solid fa-location-dot"></i> 
+            <a href="https://www.google.com/maps/search/?q=40+bis+rue+Jean+Jaurès,+80170+Rosières+en+Santerre" target="_blank">
+                40 bis rue Jean Jaurès, 80170 Rosières en Santerre
+            </a>
+        </p>
+            <!-- Carte avec l'adresse spécifique -->
             <div class="map-container">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6336.233676529736!2d2.705074002006298!3d49.81512058015924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47eacdb271f3d6cf%3A0xaac20be327be1a4!2sRosiere%20en%20Santerre%20Espace%20Coiffure!5e0!3m2!1sen!2sfr!4v1622280054294!5m2!1sen!2sfr"
-                    width="600"
-                    height="450"
-                    frameborder="0"
-                    style="border:0;"
-                    allowfullscreen=""
-                    aria-hidden="false"
-                    tabindex="0"
-                ></iframe>
-        </div>
-    </div>
-</section>
-
-
-       <section class="content">
-            <div id='A propos' class="propos">
-            <div class="propos-left">
-                <h1>A propos</h1>
-            <div class="propos-box">
-                <p>Un salon de coiffure pour hommes et femmes offrant un service de qualité vous attend. </p>
+                   <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6336.233676529736!2d2.705074002006298!3d49.81512058015924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47eacdb271f3d6cf%3A0xaac20be327be1a4!2sRosiere%20en%20Santerre%20Espace%20Coiffure!5e0!3m2!1sen!2sfr!4v1622280054294!5m2!1sen!2sfr"
+                width="100%" 
+                height="300" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+            </div>
+        </section>
+        
+        <section id="apropos" class="mb-5 active-section">
+            <h2>À propos</h2>
+            <div class="apropos-bubble">
+                <p>Espace ISA'PHIL coiffure, votre espace beauté dédié à la coiffure et au bien-être.</p>
                 <p>Venez découvrir l'expertise de nos coiffeurs entièrement dévoués à réaliser vos souhaits</p>
-                <p>Que vous recherchiez un changement radical ou simplement une touche de fraîcheur, notre équipe est là pour vous.</p>
+            <br>
+                <p>Que vous recherchiez un changement radical ou simplement une touche de fraîcheur, notre équipe est là pour vous.Dans une ambiance chaleureuse et conviviale, nous mettons un point d'honneur à vous offrir une expérience unique et personnalisée.</p>
+            <br>
+                <p>Nous utilisons des produits de qualité pour prendre soin de vos cheveux tout en respectant leur nature. Nos coiffeurs experts vous accompagneront avec des conseils adaptés à vos envies et à votre style.</p>
                 <p>Au plaisir de vous accueillir très bientôt !</p>
             </div>
-          </div>
-        </div>
-       </section>     
-            
+        </section>        
+    </main>
 
-    <div id="scrollToTop" class="scroll-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </div>
-     
-
-    <footer class="footer">
-        <div class="footer-container">
-            <!--div class="footer-content">
-                <h3>Contactez-nous</h3>
-                <p>Email : <a href="mailto:example@example.com">example@example.com</a></p>
-                <p>Téléphone : <a href="tel:+123456789">+123456789</a></p>
-                <p>Adresse : 40 bis rue Jean Juarés, 80170 Rosiere en Santerre</p>
-            </div-->        
-        </div>
-    </footer>
+       <footer class="bg-dark text-white text-center p-3">
+            &copy; 2025 - Espace ISA'PHIL coiffure
+       </footer>
 </body>
 </html>
+
+
+
